@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MBRCardStoreLocation extends StatelessWidget {
-  const MBRCardStoreLocation({super.key});
+class DetailsCardStoreLocationWidget extends StatelessWidget {
+  const DetailsCardStoreLocationWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

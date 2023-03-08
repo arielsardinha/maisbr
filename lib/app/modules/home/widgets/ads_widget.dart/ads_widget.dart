@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MBRADSWidget extends StatelessWidget {
-  const MBRADSWidget({super.key});
+class HomeAdsWidget extends StatelessWidget {
+  const HomeAdsWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

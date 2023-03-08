@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class MBRGridViewCategorias extends StatelessWidget {
-  const MBRGridViewCategorias({super.key});
+class HomeGridViewCategoriasWidget extends StatelessWidget {
+  const HomeGridViewCategoriasWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
