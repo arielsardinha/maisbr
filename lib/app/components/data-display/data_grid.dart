@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AdvDataGrid<T, B extends T> extends StatefulWidget {
+class MBRDataGrid<T, B extends T> extends StatefulWidget {
   final Widget? header;
   final List<Widget> columns;
   final List<T> rows;
@@ -10,7 +10,7 @@ class AdvDataGrid<T, B extends T> extends StatefulWidget {
   final void Function(T)? onLongPress;
   final Color Function(T)? colorRow;
 
-  const AdvDataGrid({
+  const MBRDataGrid({
     super.key,
     required this.columns,
     this.header,
@@ -23,10 +23,10 @@ class AdvDataGrid<T, B extends T> extends StatefulWidget {
   });
 
   @override
-  State<AdvDataGrid<T, B>> createState() => _AdvDataGridState<T, B>();
+  State<MBRDataGrid<T, B>> createState() => _MBRDataGridState<T, B>();
 }
 
-class _AdvDataGridState<T, B extends T> extends State<AdvDataGrid<T, B>> {
+class _MBRDataGridState<T, B extends T> extends State<MBRDataGrid<T, B>> {
   late int loadRow;
   var load = false;
 
@@ -45,7 +45,6 @@ class _AdvDataGridState<T, B extends T> extends State<AdvDataGrid<T, B>> {
           setState(() {});
           final newRows = await widget.onPageChanged!();
           widget.rows.addAll(newRows);
-        } catch (e) {
         } finally {
           load = false;
           setState(() {});

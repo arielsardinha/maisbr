@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:maisbr/app/routers/app_pages.dart';
 
 abstract class Routes {

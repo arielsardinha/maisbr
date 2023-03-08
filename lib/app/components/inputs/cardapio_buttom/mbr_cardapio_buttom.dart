@@ -1,7 +1,9 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
-class MBRValidatorButtom extends StatelessWidget {
-  const MBRValidatorButtom({super.key});
+class MbrCardapioButtom extends StatelessWidget {
+  const MbrCardapioButtom({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,7 @@ class MBRValidatorButtom extends StatelessWidget {
         onPressed: () {},
         style: ElevatedButton.styleFrom(
           foregroundColor: Colors.white,
-          backgroundColor: Colors.greenAccent[400],
+          backgroundColor: Colors.amber[900],
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8.0),
           ),
@@ -19,9 +21,7 @@ class MBRValidatorButtom extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: const [
-            SizedBox(width: 40),
-            Text('Validar meu desconto', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black)),
-            Icon(Icons.check, size: 30, color: Colors.green,),
+            Text('Ver Cardápio', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)),
           ],
         ),
       ),

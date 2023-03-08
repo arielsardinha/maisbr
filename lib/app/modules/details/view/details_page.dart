@@ -1,10 +1,14 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:maisbr/app/components/layout/app_bar/app_bar.dart';
-import 'package:maisbr/app/modules/details/widgets/card_store_location/card_store_location.dart';
 import 'package:maisbr/app/components/layout/scaffold/scaffold_drawer.dart';
-
+import 'package:maisbr/app/modules/details/widgets/card_store_location/card_store_location.dart';
+import 'package:maisbr/app/modules/details/widgets/data_grid/data_grid_widget.dart';
+import '../../../components/inputs/cardapio_buttom/mbr_cardapio_buttom.dart';
+import '../../../components/inputs/validator_buttom/validator_buttom.dart';
+import '../widgets/card_social_midia/card_social_midia.dart';
+import '../widgets/details_descrition/details_descrition_widget.dart';
 import '../widgets/store_photo/store_photo.dart';
-import '../../../components/layout/validator_buttom/validator_buttom.dart';
 
 class DetailsPage extends StatelessWidget {
   const DetailsPage({super.key});
@@ -15,11 +19,15 @@ class DetailsPage extends StatelessWidget {
       endDrawer: const MBRScaffoldDrawer(),
       appBar: MBRAppBar(),
       body: ListView(
-        children: [
-          const DetaisStorePhotoWidget(),
-          const DetailsCardStoreLocationWidget(),
-          const MBRValidatorButtom(),
-          Container(),
+        children: const [
+          DetaisStorePhotoWidget(),
+          DetailsCardStoreLocationWidget(),
+          MBRValidatorButtom(),
+          DetailsDescritionWidget(title: 'Carrefour Market'),
+          DetaisDataGridWidget(),
+          MbrCardapioButtom(),
+          DetailsDescritionWidget(title: 'Regras de uso'),
+          DetailsCardSocialMidia(),
         ],
       ),
     );
