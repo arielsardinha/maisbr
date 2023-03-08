@@ -1,6 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:get/get.dart';
+import 'package:maisbr/app/modules/details/bindings/bindings.dart';
 import 'package:maisbr/app/modules/home/view/home_page.dart';
 import 'package:maisbr/app/modules/splash/view/splash_view.dart';
 import 'package:maisbr/app/routers/app_routes.dart';
@@ -28,6 +29,7 @@ abstract class AppPages {
     GetPage(
       name: Routes.DETAILS,
       page: () => const DetailsPage(),
+      binding: DetailsBindes(),
     ),
   ];
 }

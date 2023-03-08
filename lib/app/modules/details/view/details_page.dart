@@ -8,6 +8,7 @@ import '../../../components/inputs/cardapio_buttom/mbr_cardapio_buttom.dart';
 import '../../../components/inputs/validator_buttom/validator_buttom.dart';
 import '../widgets/card_social_midia/card_social_midia.dart';
 import '../widgets/details_descrition/details_descrition_widget.dart';
+import '../widgets/google_maps/google_maps.dart';
 import '../widgets/store_photo/store_photo.dart';
 
 class DetailsPage extends StatelessWidget {
@@ -28,6 +29,7 @@ class DetailsPage extends StatelessWidget {
           MbrCardapioButtom(),
           DetailsDescritionWidget(title: 'Regras de uso'),
           DetailsCardSocialMidia(),
+          DetailsGoogleMapsWidget(),
         ],
       ),
     );
