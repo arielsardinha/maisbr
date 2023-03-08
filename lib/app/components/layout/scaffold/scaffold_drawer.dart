@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ScaffoldDrawer extends StatelessWidget {
-  const ScaffoldDrawer({super.key});
+class MBRScaffoldDrawer extends StatelessWidget {
+  const MBRScaffoldDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {

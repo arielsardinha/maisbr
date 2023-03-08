@@ -16,12 +16,12 @@ class MyApp extends StatelessWidget {
       title: 'mais br',
       theme: ThemeData(
         drawerTheme: const DrawerThemeData(
-          backgroundColor: Color.fromARGB(255, 26, 120, 254),
+          backgroundColor: Colors.blue,
         ),
       ),
       debugShowCheckedModeBanner: false,
       getPages: AppPages.routes,
-      initialRoute: Routes.HOME,
+      initialRoute: Routes.DETAILS,
     );
   }
 }

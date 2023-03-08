@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MBRAppBar extends AppBar {
-  final VoidCallback? onPressedArrowBackIos;
-  final VoidCallback? onPressedMenu;
-  MBRAppBar({super.key, required this.onPressedArrowBackIos, required this.onPressedMenu})
-      : super(
+  MBRAppBar({
+    super.key,
+  }) : super(
           elevation: 1,
           title: const Text(
             'mais br',
@@ -15,6 +14,5 @@ class MBRAppBar extends AppBar {
             ),
           ),
           centerTitle: true,
-         
         );
 }
