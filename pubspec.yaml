@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.5
   validatorless: ^1.2.3
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
