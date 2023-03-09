@@ -1,13 +1,14 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:get/get.dart';
+import 'package:maisbr/app/modules/cadastro/bindings/cadastro_perfil_bindings.dart';
 import 'package:maisbr/app/modules/cadastro/view/cadastro_page.dart';
+import 'package:maisbr/app/modules/details/bindings/details_bindings.dart';
+import 'package:maisbr/app/modules/login/bindings/login_bindings.dart';
 import 'package:maisbr/app/modules/login/view/login_page.dart';
-import 'package:maisbr/app/modules/details/bindings/bindings.dart';
 import 'package:maisbr/app/modules/home/view/home_page.dart';
 import 'package:maisbr/app/modules/splash/view/splash_view.dart';
 import 'package:maisbr/app/routers/app_routes.dart';
-
 import '../modules/details/view/details_page.dart';
 
 abstract class RoutesRaiz {
@@ -38,10 +39,12 @@ abstract class AppPages {
     GetPage(
       name: Routes.LOGIN,
       page: () => const LoginPage(),
+      binding: LoginBindings(),
     ),
     GetPage(
       name: Routes.CADASTRO,
       page: () => const CadastroPage(),
+      binding: CadastroPerfilBindings(),
     ),
   ];
 }

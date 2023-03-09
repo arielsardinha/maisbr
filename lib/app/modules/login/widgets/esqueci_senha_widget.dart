@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:maisbr/app/modules/login/controller/login_controller.dart';
 
-class LoginEsqueciSenhaWidget extends StatelessWidget {
+class LoginEsqueciSenhaWidget extends GetView<LoginController> {
   const LoginEsqueciSenhaWidget({super.key});
 
   @override
@@ -13,10 +15,14 @@ class LoginEsqueciSenhaWidget extends StatelessWidget {
           Row(
             children: [
               Text('Lembre-me', style: TextStyle(color: Colors.grey[600])),
-              Switch(
-                value: false,
-                onChanged: (value) {},
-                activeColor: Colors.blue,
+              Obx(
+                () => Switch(
+                  value: false,
+                  onChanged: (value) {
+                    controller.togleswitchLogin.value = value;
+                  },
+                  activeColor: Colors.blue,
+                ),
               ),
             ],
           ),

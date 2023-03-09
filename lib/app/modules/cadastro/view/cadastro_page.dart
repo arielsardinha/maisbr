@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:maisbr/app/components/inputs/entrar_buttom/mbr_label_buttom.dart';
 import 'package:maisbr/app/components/inputs/mbr_text_form_field.dart';
 import 'package:maisbr/app/components/layout/app_bar/app_bar.dart';
 import 'package:maisbr/app/components/layout/scaffold/bottom_navigator_bar.dart';
 import 'package:maisbr/app/components/layout/scaffold/scaffold_drawer.dart';
+import 'package:maisbr/app/modules/cadastro/controller/cadastro_controller.dart';
 import 'package:maisbr/app/modules/cadastro/widgets/perfil_widget.dart';
 
-class CadastroPage extends StatelessWidget {
+class CadastroPage extends GetView<CadastroController> {
   const CadastroPage({super.key});
 
   @override
@@ -92,10 +94,14 @@ class CadastroPage extends StatelessWidget {
               Row(
                 children: [
                   Text('Lembre-me', style: TextStyle(color: Colors.grey[600])),
-                  Switch(
-                    value: false,
-                    onChanged: (value) {},
-                    activeColor: Colors.blue,
+                  Obx(
+                    () => Switch(
+                      value: controller.togleswitchCadastro.value,
+                      onChanged: (value) {
+                        controller.togleswitchCadastro.value = value;
+                      },
+                      activeColor: Colors.blue,
+                    ),
                   ),
                 ],
               ),

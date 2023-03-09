@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:maisbr/app/components/inputs/mbr_text_form_field.dart';
 import 'package:maisbr/app/components/inputs/validator_buttom/validator_buttom.dart';
+import 'package:maisbr/app/modules/login/controller/login_controller.dart';
 import 'package:maisbr/app/modules/login/widgets/esqueci_senha_widget.dart';
 import 'package:maisbr/app/modules/login/widgets/logo_m_widget.dart';
 import 'package:maisbr/app/modules/login/widgets/logo_sou_mais_widget.dart';
 import 'package:validatorless/validatorless.dart';
 import '../../../components/inputs/entrar_buttom/mbr_label_buttom.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends GetView<LoginController> {
   const LoginPage({super.key});
 
   @override
@@ -43,7 +45,7 @@ class LoginPage extends StatelessWidget {
                 ]),
               ),
             ),
-            const LoginEsqueciSenhaWidget(),
+            // const LoginEsqueciSenhaWidget(),
             const Padding(
               padding: EdgeInsets.all(16.0),
               child: MbrLabelButtom(label: 'Entrar'),
