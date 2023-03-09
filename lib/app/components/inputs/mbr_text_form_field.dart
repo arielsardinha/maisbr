@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -22,9 +23,11 @@ class MBRTextFormField extends StatefulWidget {
   final EdgeInsetsGeometry? contentPadding;
   final String? initialValue;
   final int? maxLength;
+  final Widget? prefixIcon;
   const MBRTextFormField({
-    super.key,
+    Key? key,
     this.controller,
+    this.height,
     this.hintText,
     this.label = '',
     this.keyboardType,
@@ -32,9 +35,8 @@ class MBRTextFormField extends StatefulWidget {
     this.onTapSuffixIcon,
     this.inputFormatters,
     this.validator,
-    this.height,
-    this.onBlur,
     this.onFocus,
+    this.onBlur,
     this.onSubmit,
     this.onChanged,
     this.onTap,
@@ -44,7 +46,8 @@ class MBRTextFormField extends StatefulWidget {
     this.contentPadding,
     this.initialValue,
     this.maxLength,
-  });
+    this.prefixIcon,
+  }) : super(key: key);
 
   @override
   State<MBRTextFormField> createState() => _MBRTextFormFieldState();
@@ -56,18 +59,15 @@ class _MBRTextFormFieldState extends State<MBRTextFormField> {
 
   @override
   void initState() {
-    inputFormatters = widget.keyboardType == TextInputType.number
-        ? [FilteringTextInputFormatter.digitsOnly, ...?widget.inputFormatters]
-        : [...?widget.inputFormatters];
+    inputFormatters =
+        widget.keyboardType == TextInputType.number ? [FilteringTextInputFormatter.digitsOnly, ...?widget.inputFormatters] : [...?widget.inputFormatters];
     iconVisibility = widget.keyboardType == TextInputType.visiblePassword;
     super.initState();
   }
 
   Widget? _hasInputPassword() {
     if (widget.keyboardType == TextInputType.visiblePassword) {
-      return iconVisibility
-          ? const Icon(Icons.visibility_off)
-          : const Icon(Icons.visibility);
+      return iconVisibility ? const Icon(Icons.visibility_off) : const Icon(Icons.visibility);
     }
 
     return widget.suffixIcon ?? const SizedBox();
@@ -121,6 +121,7 @@ class _MBRTextFormFieldState extends State<MBRTextFormField> {
             isDense: true,
             label: Text(widget.label),
             hintText: widget.hintText,
+            prefixIcon: widget.prefixIcon,
             suffixIcon: InkWell(
               onTap: _onTapSuffixIcon(),
               child: _hasInputPassword(),

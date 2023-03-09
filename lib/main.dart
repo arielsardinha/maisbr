@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       getPages: AppPages.routes,
-      initialRoute: Routes.DETAILS,
+      initialRoute: Routes.CADASTRO,
     );
   }
 }

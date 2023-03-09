@@ -5,13 +5,10 @@ class MBRAppBar extends AppBar {
     super.key,
   }) : super(
           elevation: 1,
-          title: const Text(
-            'mais br',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
+          title: Image.asset(
+            'assets/imagens/LogoM.jpeg',
+            height: 40,
+            width: 40,
           ),
           centerTitle: true,
         );

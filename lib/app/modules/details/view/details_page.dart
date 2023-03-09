@@ -23,7 +23,7 @@ class DetailsPage extends StatelessWidget {
         children: const [
           DetaisStorePhotoWidget(),
           DetailsCardStoreLocationWidget(),
-          MBRValidatorButtom(),
+          MBRValidatorButtom(label: 'Validar meu desconto'),
           DetailsDescritionWidget(title: 'Carrefour Market'),
           DetaisDataGridWidget(),
           MbrCardapioButtom(),

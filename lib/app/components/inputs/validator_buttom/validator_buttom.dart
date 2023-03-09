@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class MBRValidatorButtom extends StatelessWidget {
-  const MBRValidatorButtom({super.key});
+  final String label;
+  const MBRValidatorButtom({
+    Key? key,
+    required this.label,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +22,14 @@ class MBRValidatorButtom extends StatelessWidget {
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: const [
-            SizedBox(width: 40),
-            Text('Validar meu desconto', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black)),
-            Icon(Icons.check, size: 30, color: Colors.green,),
+          children: [
+            const SizedBox(width: 40),
+            Text(label, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black)),
+            const Icon(
+              Icons.check,
+              size: 30,
+              color: Colors.green,
+            ),
           ],
         ),
       ),
