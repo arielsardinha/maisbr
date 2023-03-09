@@ -31,6 +31,7 @@ class BottomNavigatorBar extends StatelessWidget {
         ),
       ],
       selectedItemColor: theme.colorScheme.primary.withGreen(255),
+      showUnselectedLabels: true,
     );
   }
 }
