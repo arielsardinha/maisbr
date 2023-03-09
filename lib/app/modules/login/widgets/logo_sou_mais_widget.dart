@@ -5,6 +5,6 @@ class LoginLogoSouMaisWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(padding: const EdgeInsets.all(16.0), child: Image.asset('assets/imagens/LogoSouMais.jpeg'));
+    return Padding(padding: const EdgeInsets.all(16.0), child: Image.asset('assets/imagens/logo.png'));
   }
 }

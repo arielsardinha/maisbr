@@ -6,7 +6,7 @@ class MBRAppBar extends AppBar {
   }) : super(
           elevation: 1,
           title: Image.asset(
-            'assets/imagens/LogoM.jpeg',
+            'assets/imagens/icon.png',
             height: 40,
             width: 40,
           ),
