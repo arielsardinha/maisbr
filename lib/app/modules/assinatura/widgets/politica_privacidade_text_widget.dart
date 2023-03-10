@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:maisbr/app/modules/assinatura/controller/assinatura_controller.dart';
 
-class AssinaturaPoliticaPrivacidadeTextWidget extends StatelessWidget {
+class AssinaturaPoliticaPrivacidadeTextWidget extends GetView<AssinaturaController> {
   const AssinaturaPoliticaPrivacidadeTextWidget({super.key});
 
   @override
@@ -8,9 +10,13 @@ class AssinaturaPoliticaPrivacidadeTextWidget extends StatelessWidget {
     return Row(
       children: [
         Radio(
-          value: false,
-          groupValue: true,
-          onChanged: (value) {},
+          value: controller.togleRadioAssinatura.value,
+          groupValue: false,
+          onChanged: (value) {
+            if (value != null) {
+              controller.togleRadioAssinatura.value = value;
+            }
+          },
         ),
         Column(
           children: [

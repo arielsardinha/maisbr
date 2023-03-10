@@ -6,6 +6,7 @@ class MBRElevatedButtom extends StatelessWidget {
   final IconData? icon;
   final Color? backgroundColor;
   final EdgeInsetsGeometry? padding;
+  final Color? labelColor;
   const MBRElevatedButtom({
     Key? key,
     required this.label,
@@ -13,6 +14,7 @@ class MBRElevatedButtom extends StatelessWidget {
     this.icon,
     this.backgroundColor,
     this.padding,
+    this.labelColor,
   }) : super(key: key);
 
   @override
@@ -31,7 +33,7 @@ class MBRElevatedButtom extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           const SizedBox(width: 40),
-          Text(label, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black)),
+          Text(label, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: labelColor ?? Colors.black)),
           Icon(
             icon,
             size: 30,

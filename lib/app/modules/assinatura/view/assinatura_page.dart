@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:maisbr/app/components/inputs/mbr_text_form_field.dart';
-import 'package:maisbr/app/components/inputs/validator_buttom/elevated_buttom.dart';
+import 'package:maisbr/app/components/inputs/elevated_buttom/elevated_buttom.dart';
 import 'package:maisbr/app/components/layout/app_bar/app_bar.dart';
 import 'package:maisbr/app/components/layout/scaffold/scaffold_drawer.dart';
 import 'package:maisbr/app/modules/assinatura/widgets/politica_privacidade_text_widget.dart';
@@ -140,6 +140,7 @@ class AssinaturaPage extends StatelessWidget {
                   const AssinaturaPoliticaPrivacidadeTextWidget(),
                   MBRElevatedButtom(
                     label: 'Quero assinar agora!',
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     icon: Icons.check,
                     onPressed: () {},
                   ),

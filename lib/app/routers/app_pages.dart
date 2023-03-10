@@ -1,6 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:get/get.dart';
+import 'package:maisbr/app/modules/assinatura/bindings/assinatura_bindings.dart';
 import 'package:maisbr/app/modules/assinatura/view/assinatura_page.dart';
 import 'package:maisbr/app/modules/cadastro/bindings/cadastro_perfil_bindings.dart';
 import 'package:maisbr/app/modules/cadastro/view/cadastro_page.dart';
@@ -51,7 +52,7 @@ abstract class AppPages {
     GetPage(
       name: Routes.ASSINATURA,
       page: () => const AssinaturaPage(),
-      // binding: AssinaturaBindings(),
+      binding: AssinaturaBindings(),
     ),
   ];
 }

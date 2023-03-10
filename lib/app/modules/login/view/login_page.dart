@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:maisbr/app/components/inputs/mbr_text_form_field.dart';
-import 'package:maisbr/app/components/inputs/validator_buttom/elevated_buttom.dart';
+import 'package:maisbr/app/components/inputs/elevated_buttom/elevated_buttom.dart';
 import 'package:maisbr/app/modules/login/widgets/esqueci_senha_widget.dart';
 import 'package:maisbr/app/modules/login/widgets/logo_m_widget.dart';
 import 'package:maisbr/app/modules/login/widgets/logo_sou_mais_widget.dart';
@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                 backgroundColor: Colors.indigoAccent[700],
                 padding: const EdgeInsets.all(12.0),
                 onPressed: () {
-                  Get.toNamed(Routes.HOME);
+                  Get.toNamed(Routes.CADASTRO);
                 },
               ),
             ),

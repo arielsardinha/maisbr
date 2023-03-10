@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:maisbr/app/components/inputs/entrar_buttom/mbr_label_buttom.dart';
+import 'package:maisbr/app/components/inputs/elevated_buttom/elevated_buttom.dart';
 import 'package:maisbr/app/components/inputs/mbr_text_form_field.dart';
 import 'package:maisbr/app/components/layout/app_bar/app_bar.dart';
 import 'package:maisbr/app/components/layout/scaffold/bottom_navigator_bar.dart';
 import 'package:maisbr/app/components/layout/scaffold/scaffold_drawer.dart';
 import 'package:maisbr/app/modules/cadastro/controller/cadastro_controller.dart';
 import 'package:maisbr/app/modules/cadastro/widgets/perfil_widget.dart';
+import 'package:maisbr/app/routers/app_routes.dart';
 
 class CadastroPage extends GetView<CadastroController> {
   const CadastroPage({super.key});
@@ -106,9 +107,15 @@ class CadastroPage extends GetView<CadastroController> {
                 ],
               ),
               const SizedBox(height: 32.0),
-              const MbrLabelButtom(
+              MBRElevatedButtom(
                 label: 'Cadastrar',
-              )
+                backgroundColor: Colors.indigoAccent[700],
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                labelColor: Colors.white,
+                onPressed: () {
+                  Get.toNamed(Routes.HOME);
+                },
+              ),
             ],
           ),
         ),

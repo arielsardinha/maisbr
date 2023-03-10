@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:maisbr/app/routers/app_routes.dart';
 
 class HomeAdsWidget extends StatelessWidget {
   const HomeAdsWidget({super.key});
@@ -25,7 +28,9 @@ class HomeAdsWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(Routes.DETAILS);
+                      },
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.white,
                         backgroundColor: Colors.green,
