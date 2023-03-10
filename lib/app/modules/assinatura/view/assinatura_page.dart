@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:maisbr/app/components/inputs/mbr_text_form_field.dart';
 import 'package:maisbr/app/components/inputs/elevated_buttom/elevated_buttom.dart';
 import 'package:maisbr/app/components/layout/app_bar/app_bar.dart';
 import 'package:maisbr/app/components/layout/scaffold/scaffold_drawer.dart';
 import 'package:maisbr/app/modules/assinatura/widgets/politica_privacidade_text_widget.dart';
 import 'package:maisbr/app/modules/assinatura/widgets/titles_assignature.dart';
+import 'package:maisbr/app/routers/app_routes.dart';
 
 class AssinaturaPage extends StatelessWidget {
   const AssinaturaPage({super.key});
@@ -142,7 +145,9 @@ class AssinaturaPage extends StatelessWidget {
                     label: 'Quero assinar agora!',
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     icon: Icons.check,
-                    onPressed: () {},
+                    onPressed: () {
+                      // Get.toNamed(Routes.INFO_PERFIL);
+                    },
                   ),
                 ],
               ),

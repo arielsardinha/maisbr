@@ -30,7 +30,7 @@ class DetailsPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
               label: 'Validar meu desconto',
               onPressed: () {
-                Get.toNamed(Routes.ASSINATURA);
+                Get.toNamed(Routes.INFO_PERFIL);
               },
             ),
           ),
