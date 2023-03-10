@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:maisbr/app/components/inputs/mbr_text_form_field.dart';
-import 'package:maisbr/app/components/inputs/validator_buttom/validator_buttom.dart';
-import 'package:maisbr/app/modules/login/controller/login_controller.dart';
+import 'package:maisbr/app/components/inputs/validator_buttom/elevated_buttom.dart';
+import 'package:maisbr/app/modules/login/widgets/esqueci_senha_widget.dart';
 import 'package:maisbr/app/modules/login/widgets/logo_m_widget.dart';
 import 'package:maisbr/app/modules/login/widgets/logo_sou_mais_widget.dart';
+import 'package:maisbr/app/routers/app_routes.dart';
 import 'package:validatorless/validatorless.dart';
-import '../../../components/inputs/entrar_buttom/mbr_label_buttom.dart';
 
-class LoginPage extends GetView<LoginController> {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,16 +49,29 @@ class LoginPage extends GetView<LoginController> {
                 ]),
               ),
             ),
-            // const LoginEsqueciSenhaWidget(),
-            const Padding(
-              padding: EdgeInsets.all(16.0),
-              child: MbrLabelButtom(label: 'Entrar'),
+            const LoginEsqueciSenhaWidget(),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+              child: MBRElevatedButtom(
+                label: 'Entrar',
+                backgroundColor: Colors.indigoAccent[700],
+                padding: const EdgeInsets.all(12.0),
+                onPressed: () {
+                  Get.toNamed(Routes.HOME);
+                },
+              ),
             ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: 80,
-              child: const MBRValidatorButtom(label: 'Quero assinar agora'),
-            )
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+              child: MBRElevatedButtom(
+                label: 'Quero assinar agora',
+                icon: Icons.check,
+                padding: const EdgeInsets.all(12.0),
+                onPressed: () {
+                  Get.toNamed(Routes.ASSINATURA);
+                },
+              ),
+            ),
           ],
         ),
       ),

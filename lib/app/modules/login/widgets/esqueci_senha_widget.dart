@@ -17,7 +17,7 @@ class LoginEsqueciSenhaWidget extends GetView<LoginController> {
               Text('Lembre-me', style: TextStyle(color: Colors.grey[600])),
               Obx(
                 () => Switch(
-                  value: false,
+                  value: controller.togleswitchLogin.value,
                   onChanged: (value) {
                     controller.togleswitchLogin.value = value;
                   },

@@ -1,6 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:get/get.dart';
+import 'package:maisbr/app/modules/assinatura/view/assinatura_page.dart';
 import 'package:maisbr/app/modules/cadastro/bindings/cadastro_perfil_bindings.dart';
 import 'package:maisbr/app/modules/cadastro/view/cadastro_page.dart';
 import 'package:maisbr/app/modules/details/bindings/details_bindings.dart';
@@ -19,6 +20,7 @@ abstract class RoutesRaiz {
   static const DETAILS = '/details';
   static const LOGIN = '/login';
   static const CADASTRO = '/cadastro';
+  static const ASSINATURA = '/assinatura';
 }
 
 abstract class AppPages {
@@ -45,6 +47,11 @@ abstract class AppPages {
       name: Routes.CADASTRO,
       page: () => const CadastroPage(),
       binding: CadastroPerfilBindings(),
+    ),
+    GetPage(
+      name: Routes.ASSINATURA,
+      page: () => const AssinaturaPage(),
+      // binding: AssinaturaBindings(),
     ),
   ];
 }

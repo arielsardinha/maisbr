@@ -8,4 +8,5 @@ abstract class Routes {
   static const DETAILS = RoutesRaiz.DETAILS;
   static const LOGIN = RoutesRaiz.LOGIN;
   static const CADASTRO = RoutesRaiz.CADASTRO;
+  static const ASSINATURA = RoutesRaiz.ASSINATURA;
 }
