@@ -6,6 +6,7 @@ import 'package:maisbr/app/modules/assinatura/view/assinatura_page.dart';
 import 'package:maisbr/app/modules/cadastro/bindings/cadastro_perfil_bindings.dart';
 import 'package:maisbr/app/modules/cadastro/view/cadastro_page.dart';
 import 'package:maisbr/app/modules/details/bindings/details_bindings.dart';
+import 'package:maisbr/app/modules/infoPerfil/view/info_perfil_page.dart';
 import 'package:maisbr/app/modules/login/bindings/login_bindings.dart';
 import 'package:maisbr/app/modules/login/view/login_page.dart';
 import 'package:maisbr/app/modules/home/view/home_page.dart';
@@ -22,6 +23,7 @@ abstract class RoutesRaiz {
   static const LOGIN = '/login';
   static const CADASTRO = '/cadastro';
   static const ASSINATURA = '/assinatura';
+  static const INFO_PERFIL = '/info_perfil';
 }
 
 abstract class AppPages {
@@ -54,5 +56,9 @@ abstract class AppPages {
       page: () => const AssinaturaPage(),
       binding: AssinaturaBindings(),
     ),
+    GetPage(
+      name: Routes.INFO_PERFIL,
+      page: () => const InfoPerfilPage(),
+    )
   ];
 }

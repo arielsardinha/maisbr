@@ -13,6 +13,7 @@ class AssinaturaPoliticaPrivacidadeTextWidget extends GetView<AssinaturaControll
           value: controller.togleRadioAssinatura.value,
           groupValue: false,
           onChanged: (value) {
+            print('value: $value');
             if (value != null) {
               controller.togleRadioAssinatura.value = value;
             }
