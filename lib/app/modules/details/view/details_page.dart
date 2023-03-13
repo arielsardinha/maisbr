@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:maisbr/app/components/layout/app_bar/app_bar.dart';
+import 'package:maisbr/app/components/layout/scaffold/bottom_navigator_bar.dart';
 import 'package:maisbr/app/components/layout/scaffold/scaffold_drawer.dart';
 import 'package:maisbr/app/modules/details/widgets/card_store_location/card_store_location.dart';
 import 'package:maisbr/app/modules/details/widgets/data_grid/data_grid_widget.dart';
@@ -50,6 +51,7 @@ class DetailsPage extends StatelessWidget {
           const DetailsGoogleMapsWidget(),
         ],
       ),
+      bottomNavigationBar: const BottomNavigatorBar(),
     );
   }
 }

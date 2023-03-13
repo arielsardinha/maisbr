@@ -13,7 +13,7 @@ class MbrSearch extends StatelessWidget {
       padding: const EdgeInsets.only(left: 20, right: 20, top: 12, bottom: 12),
       child: TextField(
         decoration: const InputDecoration(
-          border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(16))),
+          border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(8))),
           hintText: 'O que você busca hoje? ',
           suffixIcon: Icon(Icons.search, color: Colors.black),
         ),

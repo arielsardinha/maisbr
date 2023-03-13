@@ -17,7 +17,10 @@ class CadastroPerfilWidget extends StatelessWidget {
                 radius: 40,
                 child: Icon(Icons.person, size: 80),
               ),
-              Text('Editar', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+              Padding(
+                padding: EdgeInsets.all(4.0),
+                child: Text('Editar', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+              ),
             ],
           ),
         ],

@@ -23,6 +23,7 @@ class MBRTextFormField extends StatefulWidget {
   final String? initialValue;
   final int? maxLength;
   final Widget? prefixIcon;
+  final BorderRadius? borderRadius;
   const MBRTextFormField({
     Key? key,
     this.controller,
@@ -46,6 +47,7 @@ class MBRTextFormField extends StatefulWidget {
     this.initialValue,
     this.maxLength,
     this.prefixIcon,
+    this.borderRadius,
   }) : super(key: key);
 
   @override
@@ -125,10 +127,8 @@ class _MBRTextFormFieldState extends State<MBRTextFormField> {
               onTap: _onTapSuffixIcon(),
               child: _hasInputPassword(),
             ),
-            border: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(
-                Radius.circular(15),
-              ),
+            border: OutlineInputBorder(
+              borderRadius: widget.borderRadius ?? BorderRadius.circular(15),
             ),
           ),
         ),

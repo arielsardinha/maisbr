@@ -7,6 +7,7 @@ class MBRElevatedButtom extends StatelessWidget {
   final Color? backgroundColor;
   final EdgeInsetsGeometry? padding;
   final Color? labelColor;
+  final BorderRadiusGeometry? borderRadius;
   const MBRElevatedButtom({
     Key? key,
     required this.label,
@@ -15,6 +16,7 @@ class MBRElevatedButtom extends StatelessWidget {
     this.backgroundColor,
     this.padding,
     this.labelColor,
+    this.borderRadius,
   }) : super(key: key);
 
   @override
@@ -26,7 +28,7 @@ class MBRElevatedButtom extends StatelessWidget {
         foregroundColor: Colors.white,
         backgroundColor: backgroundColor ?? Colors.greenAccent[400],
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: borderRadius ?? BorderRadius.circular(8.0),
         ),
       ),
       child: Row(

@@ -13,7 +13,7 @@ class AssinaturaTitles extends StatelessWidget {
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500, color: Colors.indigo[900]),
           ),
         ),
-        const SizedBox(height: 10),
+        const SizedBox(height: 8),
         RichText(
           text: const TextSpan(
             children: <TextSpan>[

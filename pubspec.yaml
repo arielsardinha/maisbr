@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.5
   validatorless: ^1.2.3
   google_maps_flutter: ^2.2.5
+  fluttericon: ^2.0.0
 
 
 dev_dependencies:

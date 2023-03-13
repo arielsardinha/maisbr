@@ -10,14 +10,17 @@ class HomeAdsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Padding(
-        padding: const EdgeInsets.only(left: 20, top: 12, bottom: 12),
+        padding: const EdgeInsets.only(left: 16, top: 12, bottom: 12),
         child: Row(
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Restam: 05:29:12', style: TextStyle(color: Colors.amber[800], fontSize: 12, fontWeight: FontWeight.w500)),
+                RichText(
+                    text: TextSpan(text: 'Restam: ', style: TextStyle(color: Colors.amber[800], fontSize: 12), children: <TextSpan>[
+                  TextSpan(text: '05:29:12', style: TextStyle(color: Colors.amber[800], fontSize: 12, fontWeight: FontWeight.w900)),
+                ])),
                 const SizedBox(height: 10),
                 const Text('R\$ 20 GRÁTIS!', style: TextStyle(color: Colors.black, fontSize: 28, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 4),

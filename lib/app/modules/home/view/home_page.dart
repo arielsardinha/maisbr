@@ -20,23 +20,20 @@ class HomePage extends StatelessWidget {
             const MbrSearch(),
             SizedBox(
               height: 200,
-              child: ListView.separated(
+              child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: 10,
                 physics: const BouncingScrollPhysics(),
                 itemBuilder: (context, index) {
                   return const HomeAdsWidget();
                 },
-                separatorBuilder: (context, index) {
-                  return const SizedBox(width: 10);
-                },
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 40, top: 12, bottom: 12),
+            const Padding(
+              padding: EdgeInsets.only(left: 30, top: 12, bottom: 12),
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: Text('Categorias', style: Theme.of(context).textTheme.titleLarge),
+                child: Text('Categorias', style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900)),
               ),
             ),
             const HomeGridViewCategoriasWidget()

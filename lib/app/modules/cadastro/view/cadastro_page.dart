@@ -106,15 +106,18 @@ class CadastroPage extends GetView<CadastroController> {
                   ),
                 ],
               ),
-              const SizedBox(height: 32.0),
-              MBRElevatedButtom(
-                label: 'Cadastrar',
-                backgroundColor: Colors.indigoAccent[700],
-                padding: const EdgeInsets.symmetric(vertical: 10.0),
-                labelColor: Colors.white,
-                onPressed: () {
-                  Get.toNamed(Routes.HOME);
-                },
+              SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
+                child: MBRElevatedButtom(
+                  label: 'Cadastrar',
+                  backgroundColor: Colors.indigoAccent[700],
+                  padding: const EdgeInsets.symmetric(vertical: 10.0),
+                  labelColor: Colors.white,
+                  onPressed: () {
+                    Get.toNamed(Routes.HOME);
+                  },
+                ),
               ),
             ],
           ),
