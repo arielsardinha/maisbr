@@ -18,6 +18,7 @@ class DetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Scaffold(
       endDrawer: const MBRScaffoldDrawer(),
       appBar: MBRAppBar(),
@@ -37,13 +38,25 @@ class DetailsPage extends StatelessWidget {
           ),
           const DetailsDescritionWidget(title: 'Carrefour Market'),
           const DetaisDataGridWidget(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-            child: MBRElevatedButtom(
-              label: 'Ver Cardápio',
-              backgroundColor: Colors.amber[900],
-              padding: const EdgeInsets.symmetric(vertical: 8),
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              gradient: LinearGradient(
+                colors: [
+                  Colors.amber[900]!,
+                  Colors.amber[800]!,
+                  Colors.amber[600]!,
+                ],
+              ),
+            ),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.transparent,
+                shadowColor: Colors.transparent,
+              ),
               onPressed: () {},
+              child: Text('Ver Cardápio', style: theme.textTheme.titleLarge?.copyWith(color: Colors.white)),
             ),
           ),
           const DetailsDescritionWidget(title: 'Regras de uso'),

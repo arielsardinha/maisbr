@@ -54,10 +54,11 @@ class _LoginPageState extends State<LoginPage> {
               padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
               child: MBRElevatedButtom(
                 label: 'Entrar',
+                labelColor: Colors.white,
                 backgroundColor: Colors.indigoAccent[700],
                 padding: const EdgeInsets.all(12.0),
                 onPressed: () {
-                  Get.toNamed(Routes.CADASTRO);
+                  Get.offAllNamed(Routes.HOME);
                 },
               ),
             ),

@@ -9,6 +9,7 @@ import 'package:maisbr/app/components/layout/scaffold/scaffold_drawer.dart';
 import 'package:maisbr/app/modules/infoPerfil/view/widgets/info_perfil_widget.dart';
 import 'package:maisbr/app/modules/infoPerfil/view/widgets/money_widget.dart';
 import 'package:maisbr/app/routers/app_routes.dart';
+import 'package:validatorless/validatorless.dart';
 
 class InfoPerfilPage extends StatelessWidget {
   const InfoPerfilPage({super.key});
@@ -29,231 +30,110 @@ class InfoPerfilPage extends StatelessWidget {
                 child: InfoPerfilMoneyWidget(),
               ),
               const SizedBox(height: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('Nome', style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.w500)),
-                  MBRTextFormField(
-                    hintText: 'Digite seu nome',
-                    keyboardType: TextInputType.name,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Campo obrigatório';
-                      }
-                      return null;
-                    },
-                  ),
-                ],
+              MBRTextFormField(
+                label: 'Digite seu nome',
+                hintText: 'Digite seu nome',
+                keyboardType: TextInputType.name,
+                validator: Validatorless.required('Campo obrigatório'),
               ),
               const SizedBox(height: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('Ultimo nome', style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.w500)),
-                  MBRTextFormField(
-                    hintText: 'Digite seu ultimo nome',
-                    keyboardType: TextInputType.name,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Campo obrigatório';
-                      }
-                      return null;
-                    },
-                  ),
-                ],
+              MBRTextFormField(
+                label: 'Digite seu ultimo nome',
+                hintText: 'Digite seu ultimo nome',
+                keyboardType: TextInputType.name,
+                validator: Validatorless.required('Campo obrigatório'),
               ),
-              const SizedBox(height: 16),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: const [
-                      Text('E-mail', style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.w500)),
                       Text('*esse é seu login de acesso', style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.w700)),
                     ],
                   ),
                   MBRTextFormField(
+                    label: 'Digite seu e-mail',
                     hintText: 'Digite seu e-mail',
                     keyboardType: TextInputType.emailAddress,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Campo obrigatório';
-                      }
-                      return null;
-                    },
+                    validator: Validatorless.required('Campo obrigatório'),
                   ),
                 ],
               ),
               const SizedBox(height: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('CEP', style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.w500)),
-                  MBRTextFormField(
-                    hintText: 'Digite seu CEP',
-                    keyboardType: TextInputType.number,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Campo obrigatório';
-                      }
-                      return null;
-                    },
-                  ),
-                ],
+              MBRTextFormField(
+                label: 'Digite seu CPF',
+                hintText: 'Digite seu CEP',
+                keyboardType: TextInputType.number,
+                validator: Validatorless.required('Campo obrigatório'),
               ),
               const SizedBox(height: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('Rua, avenida, travessa...', style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.w500)),
-                  MBRTextFormField(
-                    hintText: 'Digite seu endereço',
-                    keyboardType: TextInputType.name,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Campo obrigatório';
-                      }
-                      return null;
-                    },
-                  ),
-                ],
+              MBRTextFormField(
+                label: 'Digite seu endereço',
+                hintText: 'Digite seu endereço',
+                keyboardType: TextInputType.name,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Campo obrigatório';
+                  }
+                  return null;
+                },
               ),
               const SizedBox(height: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('Número', style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.w500)),
-                  MBRTextFormField(
-                    hintText: 'Digite seu número',
-                    keyboardType: TextInputType.number,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Campo obrigatório';
-                      }
-                      return null;
-                    },
-                  ),
-                ],
+              MBRTextFormField(
+                label: 'Digite seu número',
+                hintText: 'Digite seu número',
+                keyboardType: TextInputType.number,
+                validator: Validatorless.required('Campo obrigatório'),
               ),
               const SizedBox(height: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('Complemento', style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.w500)),
-                  MBRTextFormField(
-                    hintText: 'Digite seu complemento',
-                    keyboardType: TextInputType.name,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Campo obrigatório';
-                      }
-                      return null;
-                    },
-                  ),
-                ],
+              MBRTextFormField(
+                label: 'Digite seu complemento',
+                hintText: 'Digite seu complemento',
+                keyboardType: TextInputType.name,
+                validator: Validatorless.required('Campo obrigatório'),
               ),
               const SizedBox(height: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('Bairro', style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.w500)),
-                  MBRTextFormField(
-                    hintText: 'Digite seu bairro',
-                    keyboardType: TextInputType.name,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Campo obrigatório';
-                      }
-                      return null;
-                    },
-                  ),
-                ],
+              MBRTextFormField(
+                label: 'Digite seu bairro',
+                hintText: 'Digite seu bairro',
+                keyboardType: TextInputType.name,
+                validator: Validatorless.required('Campo obrigatório'),
               ),
               const SizedBox(height: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('Cidade', style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.w500)),
-                  MBRTextFormField(
-                    hintText: 'Digite sua cidade',
-                    keyboardType: TextInputType.name,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Campo obrigatório';
-                      }
-                      return null;
-                    },
-                  ),
-                ],
+              MBRTextFormField(
+                label: 'Digite sua cidade',
+                hintText: 'Digite sua cidade',
+                keyboardType: TextInputType.name,
+                validator: Validatorless.required('Campo obrigatório'),
               ),
               const SizedBox(height: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('Estado', style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.w500)),
-                  MBRTextFormField(
-                    hintText: 'Digite seu estado',
-                    keyboardType: TextInputType.name,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Campo obrigatório';
-                      }
-                      return null;
-                    },
-                  ),
-                ],
+              MBRTextFormField(
+                label: 'Digite seu estado',
+                hintText: 'Digite seu estado',
+                keyboardType: TextInputType.name,
+                validator: Validatorless.required('Campo obrigatório'),
               ),
               const SizedBox(height: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('País', style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.w500)),
-                  MBRTextFormField(
-                    hintText: 'Digite seu país',
-                    keyboardType: TextInputType.name,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Campo obrigatório';
-                      }
-                      return null;
-                    },
-                  ),
-                ],
+              MBRTextFormField(
+                label: 'Digite seu país',
+                hintText: 'Digite seu país',
+                keyboardType: TextInputType.name,
+                validator: Validatorless.required('Campo obrigatório'),
               ),
               const SizedBox(height: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('Telefone', style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.w500)),
-                  MBRTextFormField(
-                    hintText: 'Digite seu telefone',
-                    keyboardType: TextInputType.phone,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Campo obrigatório';
-                      }
-                      return null;
-                    },
-                  ),
-                ],
+              MBRTextFormField(
+                label: 'Digite seu telefone',
+                hintText: 'Digite seu telefone',
+                keyboardType: TextInputType.phone,
+                validator: Validatorless.required('Campo obrigatório'),
               ),
               const SizedBox(height: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('Data de nascimento', style: TextStyle(color: Colors.grey, fontSize: 14, fontWeight: FontWeight.w500)),
-                  MBRTextFormField(
-                    hintText: 'Digite sua data de nascimento',
-                    keyboardType: TextInputType.datetime,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Campo obrigatório';
-                      }
-                      return null;
-                    },
-                  ),
-                ],
+              MBRTextFormField(
+                label: 'Digite sua data de nascimento',
+                hintText: 'Digite sua data de nascimento',
+                keyboardType: TextInputType.datetime,
+                validator: Validatorless.required('Campo obrigatório'),
               ),
               const SizedBox(height: 16),
               MBRElevatedButtom(

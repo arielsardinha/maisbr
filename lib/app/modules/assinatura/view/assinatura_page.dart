@@ -151,9 +151,9 @@ class AssinaturaPage extends StatelessWidget {
                       return null;
                     },
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 4),
-                    child: const AssinaturaPoliticaPrivacidadeTextWidget(),
+                  const Padding(
+                    padding: EdgeInsets.only(bottom: 4),
+                    child: AssinaturaPoliticaPrivacidadeTextWidget(),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 10),
